@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8daa0d87eecf37143a022436c3a0715d, type: 3}
   m_Name: DeadTree5
   m_EditorClassIdentifier: 
-  propability: 3
   prefab: {fileID: 5753863055608169852, guid: b76a2224b883dd34d93da7f345c89934, type: 3}
-  minScale: 1
-  maxScale: 2
+  minScale: 0.8
+  maxScale: 3

@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8daa0d87eecf37143a022436c3a0715d, type: 3}
   m_Name: Conifer3
   m_EditorClassIdentifier: 
-  propability: 10
   prefab: {fileID: 1996175369785628248, guid: 634107d93500a324c9aaea6dc0b9fa70, type: 3}
   minScale: 0.8
-  maxScale: 1.2
+  maxScale: 3

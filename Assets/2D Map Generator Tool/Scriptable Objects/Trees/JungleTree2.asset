@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8daa0d87eecf37143a022436c3a0715d, type: 3}
   m_Name: JungleTree2
   m_EditorClassIdentifier: 
-  propability: 10
   prefab: {fileID: 3128363440866809479, guid: da1fcda3cc59f46478c4b29e9033f7bc, type: 3}
   minScale: 1
-  maxScale: 2
+  maxScale: 3

@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8daa0d87eecf37143a022436c3a0715d, type: 3}
   m_Name: SavannaTree1
   m_EditorClassIdentifier: 
-  propability: 10
   prefab: {fileID: 2613447104318164389, guid: 1764bed2ba3785d41b222af1a729d116, type: 3}
   minScale: 1
   maxScale: 2

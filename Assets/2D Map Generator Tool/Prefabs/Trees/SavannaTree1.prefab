@@ -56,6 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6763906448362940783}
   - component: {fileID: 6420145535287581312}
+  - component: {fileID: 3638206669345215208}
   m_Layer: 0
   m_Name: Baobab
   m_TagString: Untagged
@@ -119,7 +120,7 @@ SpriteRenderer:
   m_SortingLayerID: 27819
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5b2b76938c6a2314482d06f174866dc5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32c73fb24ef37fc4d9a2760ed1014360, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,3 +131,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &3638206669345215208
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8965328186906508799}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.11}
+  m_Size: {x: 0.2, y: 0.17}
+  m_Direction: 0

@@ -56,6 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4594760923619370056}
   - component: {fileID: 3088371797582838278}
+  - component: {fileID: 6127100698007006549}
   m_Layer: 0
   m_Name: Cyprys
   m_TagString: Untagged
@@ -119,7 +120,7 @@ SpriteRenderer:
   m_SortingLayerID: 27819
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 14bee3c4586bf7d4dad02173fa41c196, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 67f02b9b600e540439a76b57713c25fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,3 +131,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &6127100698007006549
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4029242975045305263}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.03}
+  serializedVersion: 2
+  m_Radius: 0.08

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8186151529579722678}
   - component: {fileID: 3401597899448509521}
+  - component: {fileID: 4046249763714173521}
   m_Layer: 0
   m_Name: Bamboo
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 27819
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 58f730fa9a5ce7f43a09c4f53e6a1aed, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 473a52a02dd7bf443be755d27e56c066, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,6 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &4046249763714173521
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5591665749026929480}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.06, y: 0.09}
+  serializedVersion: 2
+  m_Radius: 0.18
 --- !u!1 &6738093888554075774
 GameObject:
   m_ObjectHideFlags: 0

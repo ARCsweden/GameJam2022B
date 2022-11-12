@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca73c3d23af886f4581ad263f77f5498, type: 3}
   m_Name: Bushes1
   m_EditorClassIdentifier: 
-  prefab: {fileID: 6847236877481271356, guid: 742f9d06b6fd6e24e950969a2c0e3838, type: 3}
+  prefab: {fileID: 3043591372031549919, guid: 1a8888b6c15ff1e4985701f527cb6763, type: 3}

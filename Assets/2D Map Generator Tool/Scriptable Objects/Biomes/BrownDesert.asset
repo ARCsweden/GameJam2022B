@@ -13,31 +13,39 @@ MonoBehaviour:
   m_Name: BrownDesert
   m_EditorClassIdentifier: 
   ground: {fileID: 21300000, guid: 9c7760e247be51d43bffbcab9e44fd26, type: 3}
-  treesIntensity: 1
+  treesIntensity: 4.7
   trees:
   - priority: 10
     model: {fileID: 11400000, guid: 04d63081564fa23419caa193895e8f6d, type: 2}
-  objectsIntensity: 0.6
-  objects:
   - priority: 10
-    model: {fileID: 11400000, guid: 6e253721cee4f674fab703ef09b1a122, type: 2}
+    model: {fileID: 11400000, guid: ade0c7f44eb03b049ae5ad89d6ee86d1, type: 2}
   - priority: 10
-    model: {fileID: 11400000, guid: c68bdf7235984aa42a59823408e9e428, type: 2}
+    model: {fileID: 11400000, guid: 1542b672e581c144ab21179ea5f41485, type: 2}
   - priority: 10
-    model: {fileID: 11400000, guid: 97114c1d1b4ff8d469e4ed0ac9d4aa26, type: 2}
+    model: {fileID: 11400000, guid: 56cf395060f1a294d892e28dfa24c844, type: 2}
   - priority: 10
-    model: {fileID: 11400000, guid: 97114c1d1b4ff8d469e4ed0ac9d4aa26, type: 2}
+    model: {fileID: 11400000, guid: 44becd363b7239644a5c326881ae3250, type: 2}
   - priority: 10
-    model: {fileID: 11400000, guid: 97114c1d1b4ff8d469e4ed0ac9d4aa26, type: 2}
+    model: {fileID: 11400000, guid: f26b262d23819de4cb6a25582688d37b, type: 2}
   - priority: 10
-    model: {fileID: 11400000, guid: 97114c1d1b4ff8d469e4ed0ac9d4aa26, type: 2}
-  locationsIntensity: 0.07
-  locations:
-  - priority: 20
-    model: {fileID: 11400000, guid: 9859e3e90fd5b9c4bbcff963f109d7bd, type: 2}
+    model: {fileID: 11400000, guid: 80eb6e270ec619b4e907c2b31da44709, type: 2}
   - priority: 10
-    model: {fileID: 11400000, guid: 5db3f8df450a80741bc552f1f9030471, type: 2}
+    model: {fileID: 11400000, guid: f6ecb31f9862afe449ca059c1b0ccec1, type: 2}
   - priority: 10
-    model: {fileID: 11400000, guid: 10580f0c16dc677499d89a9e3adbb75f, type: 2}
+    model: {fileID: 11400000, guid: 52ed89aed916b424d9007edeef9f9f55, type: 2}
   - priority: 10
-    model: {fileID: 11400000, guid: 5bb730c73c9218547b15e6a9d342180a, type: 2}
+    model: {fileID: 11400000, guid: a2198c9508e061b47ab344157129f3f9, type: 2}
+  - priority: 10
+    model: {fileID: 11400000, guid: 968bd20cca145bf4ca252c81bb2b0893, type: 2}
+  - priority: 10
+    model: {fileID: 11400000, guid: 6c20af10a75910c44ba10d534860a2ed, type: 2}
+  - priority: 10
+    model: {fileID: 11400000, guid: bec33dc2ee3b7cd4aa39c9b9f1d34441, type: 2}
+  - priority: 2
+    model: {fileID: 11400000, guid: 82122f0f18afdf742b5970b6139aa6f3, type: 2}
+  - priority: 10
+    model: {fileID: 11400000, guid: 3ef23468b4dd7b5499e78f120927a59e, type: 2}
+  objectsIntensity: 0
+  objects: []
+  locationsIntensity: 0
+  locations: []
