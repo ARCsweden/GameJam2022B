@@ -26,6 +26,9 @@ public class FrogAim : MonoBehaviour
     public Vector3 tongueTopPoint;
     public Vector3 tongueBottomPoint;
     private Vector3[] frogToungeVertices;
+    private float tongueLength = 0;
+    public float maxTongueLength = 1;
+    public float launchTime = 1;
     // Update is called once per frame
     void Update()
     {
@@ -61,10 +64,11 @@ public class FrogAim : MonoBehaviour
         animator.SetInteger("Direction",(int)dir);
         animator.SetFloat("AnimTime",Time.time*1.5f);
 
-        FrogTongue(angleRadTongue, dir);    
+        FrogTongue(angleRadTongue, dir);
     }
 public LineRenderer frogTongue;
-        
+private bool launching = false;
+private bool retracting = false;       
     void FrogTongue(float angleRad, Direction dir){
         Vector3[] toungePositions = new Vector3[6];
         if(dir == Direction.Right){
@@ -79,19 +83,38 @@ public LineRenderer frogTongue;
         if(dir == Direction.Down){
             tongueSource.localPosition = tongueBottomPoint;
         }
-        if(Input.GetButton("Fire1")){
+
+        if(Input.GetButton("Fire1") && !launching && !retracting){
+            launching = true;
+        }
+        if(launching && tongueLength == maxTongueLength){
+            launching = false;
+            retracting = true;
+        }
+        if(retracting && tongueLength == 0){
+            retracting = false;
+        }
+        LaunchTongue(launching,maxTongueLength);
+        if(launching || retracting){
             for (int i = 0; i < frogToungeVertices.Length; i++) {
                 float toungeMagnitude = new Vector2(frogToungeVertices[i].x,frogToungeVertices[i].y).magnitude;
-                toungePositions[i] = new Vector3(Mathf.Cos(angleRad),Mathf.Sin(angleRad),0) * toungeMagnitude;
+                toungePositions[i] = new Vector3(Mathf.Cos(angleRad),Mathf.Sin(angleRad),0) * toungeMagnitude * tongueLength;
             }
             frogTongue.SetPositions(toungePositions);
-            
             animator.SetFloat("MouthOpen",1f);
+
         }
         else{
             animator.SetFloat("MouthOpen",0f);
             frogTongue.SetPositions(new Vector3[frogTongue.positionCount]);
         }
     }
-    
+    void LaunchTongue(bool outwards, float maxLength){
+        if(outwards){
+            tongueLength = Mathf.Clamp(tongueLength + Time.deltaTime / launchTime*maxLength,0,maxLength);
+        }
+        else{
+            tongueLength = Mathf.Clamp(tongueLength - Time.deltaTime / launchTime*maxLength,0,maxLength);
+        }
+    }
 }

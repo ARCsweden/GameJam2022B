@@ -352,9 +352,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8485850066974534423, guid: 846cb21b6dc08d449acfd31de5f2933a, type: 3}
+      propertyPath: launchTime
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485850066974534423, guid: 846cb21b6dc08d449acfd31de5f2933a, type: 3}
+      propertyPath: launchSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485850066974534423, guid: 846cb21b6dc08d449acfd31de5f2933a, type: 3}
+      propertyPath: maxTongueLength
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8485850066974534634, guid: 846cb21b6dc08d449acfd31de5f2933a, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485850067493486131, guid: 846cb21b6dc08d449acfd31de5f2933a, type: 3}
+      propertyPath: m_Positions.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485850067493486131, guid: 846cb21b6dc08d449acfd31de5f2933a, type: 3}
+      propertyPath: m_Positions.Array.data[2].y
+      value: -0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485850067493486131, guid: 846cb21b6dc08d449acfd31de5f2933a, type: 3}
+      propertyPath: m_Positions.Array.data[6].y
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 846cb21b6dc08d449acfd31de5f2933a, type: 3}
