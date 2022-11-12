@@ -17,6 +17,6 @@ public class EnemyConfig : MonoBehaviour
     void Update()
     {
         Vector2 newPos = new Vector2(target.transform.position.x, target.transform.position.y);
-        transform.position = Vector3.Slerp(transform.position, newPos, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
     }
 }
