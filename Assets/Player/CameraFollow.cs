@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public float FollowSpeed = 2f;
-    public float yOffset = 1f;
-    public Transform target;
+    
+    //public Transform target;
+    private GameObject target;
 
-
+    void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player");
+    }
     // Update is called once per frame
     void Update()
     {
-        Vector3 newPos = new Vector3(target.position.x, target.position.y + yOffset, target.position.z - 10f);
-        transform.position = Vector3.Slerp(transform.position, newPos, FollowSpeed * Time.deltaTime);
+        Vector3 newPos = new Vector3(target.transform.position.x, target.transform.position.y, 10f);
+        transform.position = Vector3.Slerp(transform.position, newPos, Time.deltaTime);
     }
 }

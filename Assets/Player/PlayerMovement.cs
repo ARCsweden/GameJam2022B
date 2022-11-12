@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    public float speed = 10.5f;
+    public float speed = 5f;
 
 
 
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
         {
 
-            pos.x += speed * Time.deltaTime;
+            pos.x -= speed * Time.deltaTime;
 
         }
 
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
 
         {
 
-            pos.x -= speed * Time.deltaTime;
+            pos.x += speed * Time.deltaTime;
 
         }
 
