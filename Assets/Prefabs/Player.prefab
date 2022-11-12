@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 27819
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 1190299132, guid: 1786d0c20a9e57342a45b7da96f86e99, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 8485850066974534423}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,12 +152,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.23}
   serializedVersion: 2
-  m_Radius: 0.32
+  m_Radius: 0.29
 --- !u!114 &8485850066974534635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &8485850066974534423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,10 +209,15 @@ MonoBehaviour:
   upAnimationAngle: 45
   downAnimationAngle: -55
   tongueSource: {fileID: 8485850067581783220}
-  tongueRightPoint: {x: 0.186, y: 0.04, z: -1}
-  tongueTopPoint: {x: 0, y: 0, z: 1}
-  tongueBottomPoint: {x: 0, y: 0, z: -1}
+  tongueRightPoint: {x: 0.186, y: 0.29, z: -1}
+  tongueTopPoint: {x: 0, y: 0.25, z: 1}
+  tongueBottomPoint: {x: 0, y: 0.25, z: -1}
+  maxTongueLength: 1.5
+  launchTime: 0.15
+  tongueCooldown: 0.5
+  tongueCol: {fileID: 2073947437}
   frogTongue: {fileID: 8485850067493486131}
+  tongueState: 3
 --- !u!1 &8485850067493486129
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,8 +289,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 27819
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -414,6 +419,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8485850067581783220}
+  - component: {fileID: 2073947437}
+  - component: {fileID: 2073947438}
   m_Layer: 0
   m_Name: TongueSource
   m_TagString: Untagged
@@ -429,7 +436,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8485850067581783179}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -437,3 +444,33 @@ Transform:
   m_Father: {fileID: 8485850066974534421}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &2073947437
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8485850067581783179}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.08
+--- !u!114 &2073947438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8485850067581783179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: beb1c80f7d58c15498c27aa050dff2f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  penetratable: 0
+  frogAim: {fileID: 8485850066974534423}

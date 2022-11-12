@@ -10,6 +10,12 @@ public class FrogAim : MonoBehaviour
         Up,
         Down
     }
+    public enum TongueState{
+        Launching,
+        Retracting,
+        Cooldown,
+        Ready
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +32,10 @@ public class FrogAim : MonoBehaviour
     public Vector3 tongueTopPoint;
     public Vector3 tongueBottomPoint;
     private Vector3[] frogToungeVertices;
-    private float tongueLength = 0;
     public float maxTongueLength = 1;
     public float launchTime = 1;
+    public float tongueCooldown;
+    public Collider2D tongueCol;
     // Update is called once per frame
     void Update()
     {
@@ -41,7 +48,7 @@ public class FrogAim : MonoBehaviour
         float angleRadTongue = Mathf.Atan2(lookAt.y - tongueSource.position.y, lookAt.x - this.transform.position.x);
 
         float angleDeg = (180 / Mathf.PI) * angleRad;
-        Debug.Log(angleDeg);
+        //Debug.Log(angleDeg);
 
         Direction dir;
         if(Mathf.Abs(angleDeg) > 90){
@@ -67,8 +74,9 @@ public class FrogAim : MonoBehaviour
         FrogTongue(angleRadTongue, dir);
     }
 public LineRenderer frogTongue;
-private bool launching = false;
-private bool retracting = false;       
+private float tongueLength = 0;
+public TongueState tongueState = TongueState.Ready;
+private float tongueCooldownLeft;     
     void FrogTongue(float angleRad, Direction dir){
         Vector3[] toungePositions = new Vector3[6];
         if(dir == Direction.Right){
@@ -84,24 +92,35 @@ private bool retracting = false;
             tongueSource.localPosition = tongueBottomPoint;
         }
 
-        if(Input.GetButton("Fire1") && !launching && !retracting){
-            launching = true;
+        if(Input.GetButton("Fire1") && tongueState == TongueState.Ready){
+            tongueState = TongueState.Launching;
         }
-        if(launching && tongueLength == maxTongueLength){
-            launching = false;
-            retracting = true;
+        if(tongueState == TongueState.Launching && tongueLength == maxTongueLength){
+            tongueState = TongueState.Retracting;
         }
-        if(retracting && tongueLength == 0){
-            retracting = false;
+        if(tongueState == TongueState.Retracting && tongueLength == 0){
+            tongueState = TongueState.Cooldown;
+            tongueCooldownLeft = tongueCooldown;
         }
-        LaunchTongue(launching,maxTongueLength);
-        if(launching || retracting){
+        if(tongueState == TongueState.Cooldown){
+            tongueCooldownLeft -= Time.deltaTime;
+            if(tongueCooldownLeft <= 0){
+                tongueState = TongueState.Ready;
+            }
+        }
+        LaunchTongue(tongueState == TongueState.Launching,maxTongueLength);
+        if(tongueState == TongueState.Launching || tongueState == TongueState.Retracting){
             for (int i = 0; i < frogToungeVertices.Length; i++) {
                 float toungeMagnitude = new Vector2(frogToungeVertices[i].x,frogToungeVertices[i].y).magnitude;
                 toungePositions[i] = new Vector3(Mathf.Cos(angleRad),Mathf.Sin(angleRad),0) * toungeMagnitude * tongueLength;
             }
             frogTongue.SetPositions(toungePositions);
             animator.SetFloat("MouthOpen",1f);
+            if(tongueState == TongueState.Launching){
+                tongueCol.offset = new Vector2(toungePositions[frogTongue.positionCount-1].x,toungePositions[frogTongue.positionCount-1].y);
+            }else{
+                tongueCol.offset = Vector2.zero;
+            }
 
         }
         else{
