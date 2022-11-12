@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - BulletPlayer
+  - NonPenetrable
   layers:
   - Default
   - TransparentFX
