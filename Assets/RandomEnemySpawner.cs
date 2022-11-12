@@ -27,8 +27,8 @@ public class RandomEnemySpawner : MonoBehaviour
 
     private IEnumerator spawnEnemy(float interval, GameObject enemy)
     {
-        float height = cam.orthographicSize;
-        float width = height * cam.aspect;
+        float height = 2 * cam.orthographicSize;
+        float width = 2 * height * cam.aspect;
 
         yield return new WaitForSeconds(interval);
         if(EnemiesSpawned < MaxEnemies) 
