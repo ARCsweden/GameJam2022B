@@ -36,6 +36,8 @@ public class FrogAim : MonoBehaviour
     public float launchTime = 1;
     public float tongueCooldown;
     public Collider2D tongueCol;
+    public GameObject pickUp;
+    public Transform pickUpSorce;
     // Update is called once per frame
     void Update()
     {
@@ -101,6 +103,9 @@ private float tongueCooldownLeft;
         if(tongueState == TongueState.Retracting && tongueLength == 0){
             tongueState = TongueState.Cooldown;
             tongueCooldownLeft = tongueCooldown;
+            if(pickUp != null){
+                Destroy(pickUp);
+            }
         }
         if(tongueState == TongueState.Cooldown){
             tongueCooldownLeft -= Time.deltaTime;
@@ -114,12 +119,16 @@ private float tongueCooldownLeft;
                 float toungeMagnitude = new Vector2(frogToungeVertices[i].x,frogToungeVertices[i].y).magnitude;
                 toungePositions[i] = new Vector3(Mathf.Cos(angleRad),Mathf.Sin(angleRad),0) * toungeMagnitude * tongueLength;
             }
+            pickUpSorce.position = toungePositions[frogToungeVertices.Length-1];
             frogTongue.SetPositions(toungePositions);
             animator.SetFloat("MouthOpen",1f);
             if(tongueState == TongueState.Launching){
                 tongueCol.offset = new Vector2(toungePositions[frogTongue.positionCount-1].x,toungePositions[frogTongue.positionCount-1].y);
             }else{
                 tongueCol.offset = Vector2.zero;
+            }
+            if(pickUp != null){
+                pickUp.transform.SetParent(pickUpSorce,true);
             }
 
         }

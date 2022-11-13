@@ -13,7 +13,7 @@ public class RandomizeFrenchman : MonoBehaviour
         for(int i = 0; i < animators.Length; i++){
             float rand = Random.value;
             animators[i].SetFloat("Variation",rand);
-            Debug.Log(rand);
+            //Debug.Log(rand);
         }
     }
 }

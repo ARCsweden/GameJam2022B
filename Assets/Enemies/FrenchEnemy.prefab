@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 408165509}
   - component: {fileID: 408165511}
   - component: {fileID: 408165510}
-  m_Layer: 0
-  m_Name: frenchman1-5_weapon_r
-  m_TagString: Untagged
+  - component: {fileID: 4136410376838584857}
+  m_Layer: 6
+  m_Name: frenchman1-5_weapon_l
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,6 +106,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &4136410376838584857
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408165508}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.66, y: 0.84}
+  m_Size: {x: 0.2, y: 0.3}
+  m_Direction: 0
 --- !u!1 &446910571
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +133,7 @@ GameObject:
   - component: {fileID: 446910572}
   - component: {fileID: 446910574}
   - component: {fileID: 446910573}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frenchman1-1_torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +238,7 @@ GameObject:
   - component: {fileID: 477600310}
   - component: {fileID: 477600312}
   - component: {fileID: 477600311}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frenchman1-3_headwear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -326,7 +343,7 @@ GameObject:
   - component: {fileID: 573298839}
   - component: {fileID: 573298841}
   - component: {fileID: 573298840}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frenchman1-2_pants
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -431,7 +448,7 @@ GameObject:
   - component: {fileID: 885667014}
   - component: {fileID: 885667016}
   - component: {fileID: 885667015}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frenchman1-4_head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -535,7 +552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1291731871}
   - component: {fileID: 1291731872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frenchman1-shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,9 +637,10 @@ GameObject:
   - component: {fileID: 1746230322}
   - component: {fileID: 1746230324}
   - component: {fileID: 1746230323}
-  m_Layer: 0
-  m_Name: frenchman1-6_weapon_l
-  m_TagString: Untagged
+  - component: {fileID: 7380473557962346622}
+  m_Layer: 6
+  m_Name: frenchman1-6_weapon_r
+  m_TagString: Edible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -714,6 +732,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!70 &7380473557962346622
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746230321}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.43, y: 0.79}
+  m_Size: {x: 0.16, y: 0.24}
+  m_Direction: 0
 --- !u!1 &1895505364
 GameObject:
   m_ObjectHideFlags: 0
@@ -724,7 +758,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1895505365}
   - component: {fileID: 1895505366}
-  m_Layer: 0
+  - component: {fileID: 8603170595703954076}
+  - component: {fileID: 4453680700494403561}
+  m_Layer: 6
   m_Name: FrenchmenSprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -772,6 +808,45 @@ MonoBehaviour:
   - {fileID: 477600311}
   - {fileID: 408165510}
   - {fileID: 1746230323}
+--- !u!61 &8603170595703954076
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895505364}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.46}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.46, y: 0.89}
+  m_EdgeRadius: 0
+--- !u!114 &4453680700494403561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895505364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623c96a54965de64d9404e2c377a2121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyConfig: {fileID: -2173818134352051867}
 --- !u!1 &2141856742
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +858,7 @@ GameObject:
   - component: {fileID: 2141856743}
   - component: {fileID: 2141856745}
   - component: {fileID: 2141856744}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: frenchman1-0_feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -889,7 +964,7 @@ GameObject:
   - component: {fileID: -2173818134352051867}
   - component: {fileID: 8906501487682444364}
   - component: {fileID: 3541685888638773503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FrenchEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -926,6 +1001,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   spriteHolder: {fileID: 1895505364}
+  retreat: 0
+  headAnim: {fileID: 885667015}
 --- !u!58 &8906501487682444364
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -939,7 +1016,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.18}
+  m_Offset: {x: 0, y: 0.3}
   serializedVersion: 2
   m_Radius: 0.32
 --- !u!50 &3541685888638773503
@@ -954,7 +1031,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
