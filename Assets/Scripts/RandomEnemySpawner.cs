@@ -40,7 +40,7 @@ public class RandomEnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(interval);
         if(EnemiesSpawned < MaxEnemies) 
         {
-            Vector3 spawnOffset = new Vector3(Random.Range(-width, width), Random.Range(-height, height), 0.0);
+            Vector3 spawnOffset = new Vector3(Random.Range(-width, width), Random.Range(-height, height), 0.0f);
             Vector3 camPos = target.position + spawnOffset;
             GameObject newEnemy = Instantiate(enemy, camPos, Quaternion.identity);
             newEnemy.GetComponentInChildren<EnemyHitbox>().randomEnemySpawner = this;
