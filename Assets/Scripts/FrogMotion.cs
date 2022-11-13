@@ -9,6 +9,8 @@ public class FrogMotion : MonoBehaviour
     private bool canJump = true;
     private float jumpTime = 0;
     private Rigidbody2D rig;
+    public Animator animator;
+    public FrogAim fA;
     void Start(){
         rig = GetComponent<Rigidbody2D>();
     }
@@ -30,5 +32,17 @@ public class FrogMotion : MonoBehaviour
         }
 
         transform.position = transform.position + Vector3.forward * (transform.position.y-transform.position.z);
+    }
+    void OnCollisionEnter2D(Collision2D col){
+        if(col.gameObject.tag == "Enemy"){
+            animator.SetBool("Death",true);
+            fA.enabled = false;
+            this.enabled = false;
+        }
+    }
+    void BauguetteHit(){
+            animator.SetBool("Death",true);
+            fA.enabled = false;
+            this.enabled = false;
     }
 }

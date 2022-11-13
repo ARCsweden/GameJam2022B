@@ -31,7 +31,7 @@ public class TongueHitter : MonoBehaviour
             frogAim.tongueState = FrogAim.TongueState.Retracting;
             tCollider.enabled = false;
         }
-        if(col.tag == "Edible" || col.tag == "Weapon"){
+        if(col.tag == "Edible" || col.tag == "Weapon" || col.tag == "Baguette"){
             if(frogAim.pickUp == null){
                 col.transform.SetParent(null,true);
                 frogAim.pickUp = col.gameObject;
@@ -68,6 +68,11 @@ public class TongueHitter : MonoBehaviour
                     Debug.Log("Eat Bottle");
                 }
             }
+        }
+        if(col.tag == "Baguette"){
+            col.gameObject.GetComponent<Collider2D>().enabled = false;
+            frogMotion.moveSpeed += powerUpMoveSpeed;
+
         }
         if(col.gameObject.layer == 6){
             col.SendMessage("Hit");        
