@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 8485850066797606100}
   - component: {fileID: 8485850066797606059}
   - component: {fileID: 1961824819}
+  - component: {fileID: 1106586519498483943}
   m_Layer: 0
   m_Name: frogSprite
   m_TagString: Untagged
@@ -150,6 +151,102 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 0ef72e2018856bb42b75def67b6ac868, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1106586519498483943
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8485850066797606058}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0ef72e2018856bb42b75def67b6ac868, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -341,7 +438,7 @@ MonoBehaviour:
   tongueRightPoint: {x: 0.186, y: 0.29, z: -1}
   tongueTopPoint: {x: 0, y: 0.25, z: 1}
   tongueBottomPoint: {x: 0, y: 0.25, z: -1}
-  maxTongueLength: 3
+  maxTongueLength: 1.5
   launchTime: 0.15
   tongueCooldown: 0.5
   tongueCol: {fileID: 2073947437}
@@ -350,6 +447,7 @@ MonoBehaviour:
   audioSource: {fileID: 1629348865}
   frogTongue: {fileID: 8485850067493486131}
   tongueState: 3
+  tongueCooldownLeft: 0
 --- !u!82 &1629348865
 AudioSource:
   m_ObjectHideFlags: 0
@@ -703,3 +801,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   penetratable: 0
   frogAim: {fileID: 8485850066974534423}
+  powerUpTongueLength: 0.2
+  powerUpCooldown: 0.2
+  powerUpPenetrationAmount: 3
+  powerUpMoveSpeed: 0.2
+  frogMotion: {fileID: 8485850066974534635}
+  knifeExtraCooldown: 0.5

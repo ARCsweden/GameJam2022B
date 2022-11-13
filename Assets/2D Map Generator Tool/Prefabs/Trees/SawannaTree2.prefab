@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 9157353121959271069}
+  trans: {fileID: 0}
 --- !u!1 &5309170895379797054
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,6 +145,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.49}
+  m_Offset: {x: 0, y: 0.3}
   m_Size: {x: 0.66, y: 0.48}
   m_Direction: 0
