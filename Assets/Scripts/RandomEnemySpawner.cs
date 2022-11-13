@@ -63,8 +63,6 @@ public class RandomEnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(interval);
         if(EnemiesSpawned < MaxEnemies) 
         {
-            //Vector3 spawnOffset = new Vector3(Random.Range(-width, width), Random.Range(-height, height), 0.0f);
-
             Vector3 spawnDir = new Vector3(UnityEngine.Random.value - 0.5f, UnityEngine.Random.value - 0.5f, 0.0f);
             spawnDir.Normalize();
             spawnDir.x *= cam.aspect;
