@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 408165511}
   - component: {fileID: 408165510}
   - component: {fileID: 4136410376838584857}
+  - component: {fileID: 7354952007657371723}
   m_Layer: 6
   m_Name: frenchman1-5_weapon_l
   m_TagString: Weapon
@@ -122,6 +123,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.66, y: 0.84}
   m_Size: {x: 0.2, y: 0.3}
   m_Direction: 0
+--- !u!114 &7354952007657371723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408165508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14bec398a4785b54184b176371f21e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &446910571
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,9 +651,10 @@ GameObject:
   - component: {fileID: 1746230324}
   - component: {fileID: 1746230323}
   - component: {fileID: 7380473557962346622}
+  - component: {fileID: 8603419120315463730}
   m_Layer: 6
   m_Name: frenchman1-6_weapon_r
-  m_TagString: Edible
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -748,6 +762,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.43, y: 0.79}
   m_Size: {x: 0.16, y: 0.24}
   m_Direction: 0
+--- !u!114 &8603419120315463730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746230321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14bec398a4785b54184b176371f21e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1895505364
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,6 +873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyConfig: {fileID: -2173818134352051867}
+  randomEnemySpawner: {fileID: 0}
 --- !u!1 &2141856742
 GameObject:
   m_ObjectHideFlags: 0
