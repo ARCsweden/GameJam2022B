@@ -32,7 +32,7 @@ public class RandomEnemySpawner : MonoBehaviour
         cam = Camera.main;
         StartCoroutine(spawnEnemy(spawnInterval, enemyPrefab));
         InvokeRepeating("IncreaseEnemyCounter", 10f, spawnRate);
-        InvokeRepeating("spawnBoss", 120f, 60f);
+        InvokeRepeating("spawnBoss", 30f, 60f);
     }
 
     void spawnBoss()
