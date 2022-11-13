@@ -9,6 +9,9 @@ public class RandomEnemySpawner : MonoBehaviour
     
     [SerializeField]
     private GameObject enemyPrefab;
+
+    [SerializeField]
+    private GameObject bigBoss;
     [SerializeField]
     public Transform target;
 
@@ -29,6 +32,22 @@ public class RandomEnemySpawner : MonoBehaviour
         cam = Camera.main;
         StartCoroutine(spawnEnemy(spawnInterval, enemyPrefab));
         InvokeRepeating("IncreaseEnemyCounter", 10f, spawnRate);
+        InvokeRepeating("spawnBoss", 120f, 60f);
+    }
+
+    void spawnBoss()
+    {
+
+        float height = 2 * cam.orthographicSize;
+        float width = height * cam.aspect;
+
+        Vector3 spawnDir = new Vector3(UnityEngine.Random.value - 0.5f, UnityEngine.Random.value - 0.5f, 0.0f);
+        spawnDir.Normalize();
+        spawnDir.x *= cam.aspect;
+        Vector3 spawnOffset = spawnDir * height;
+        Vector3 camPos = target.position + spawnOffset;
+
+        GameObject newEnemy = Instantiate(bigBoss, camPos, Quaternion.identity);
     }
 
     void IncreaseEnemyCounter()
