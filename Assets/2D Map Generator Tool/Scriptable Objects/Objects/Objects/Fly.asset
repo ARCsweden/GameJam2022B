@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca73c3d23af886f4581ad263f77f5498, type: 3}
-  m_Name: Trunk1
+  m_Name: Fly
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3937066305587375215, guid: 59e5cff456732704ea570f63830540a2, type: 3}
+  prefab: {fileID: 4017785815808056504, guid: da8dfc98f0d97de418a38c4d51abbd67, type: 3}

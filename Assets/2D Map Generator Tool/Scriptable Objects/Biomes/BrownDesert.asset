@@ -45,7 +45,9 @@ MonoBehaviour:
     model: {fileID: 11400000, guid: 82122f0f18afdf742b5970b6139aa6f3, type: 2}
   - priority: 10
     model: {fileID: 11400000, guid: 3ef23468b4dd7b5499e78f120927a59e, type: 2}
-  objectsIntensity: 0
-  objects: []
+  objectsIntensity: 1
+  objects:
+  - priority: 10
+    model: {fileID: 11400000, guid: 9c9da2daddf0957489b787a4e8ebf76a, type: 2}
   locationsIntensity: 0
   locations: []
