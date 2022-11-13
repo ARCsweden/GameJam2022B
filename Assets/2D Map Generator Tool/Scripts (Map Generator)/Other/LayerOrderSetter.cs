@@ -9,6 +9,7 @@ public class LayerOrderSetter : MonoBehaviour
     void Start()
     {
         mapGeneratorTool = FindObjectOfType<MapGeneratorTool>();
-        spriteRenderer.sortingOrder = (int)(mapGeneratorTool.height - transform.position.z);
+        //spriteRenderer.sortingOrder = (int)(mapGeneratorTool.height - transform.position.z);
+        transform.position = transform.position + Vector3.forward * (transform.position.y-transform.position.z);
     }
 }
