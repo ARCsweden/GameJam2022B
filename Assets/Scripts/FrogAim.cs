@@ -38,6 +38,8 @@ public class FrogAim : MonoBehaviour
     public Collider2D tongueCol;
     public GameObject pickUp;
     public Transform pickUpSorce;
+    public AudioSource audioSource;
+
     // Update is called once per frame
     void Update()
     {
@@ -96,6 +98,7 @@ private float tongueCooldownLeft;
 
         if(Input.GetButton("Fire1") && tongueState == TongueState.Ready){
             tongueState = TongueState.Launching;
+            audioSource.Play();
         }
         if(tongueState == TongueState.Launching && tongueLength == maxTongueLength){
             tongueState = TongueState.Retracting;

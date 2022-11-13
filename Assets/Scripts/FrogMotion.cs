@@ -29,6 +29,6 @@ public class FrogMotion : MonoBehaviour
             rig.velocity = new Vector2(movementVector.x*1.5f,movementVector.y);
         }
 
-
+        transform.position = transform.position + Vector3.forward * (transform.position.y-transform.position.z);
     }
 }
