@@ -80,7 +80,7 @@ public class FrogAim : MonoBehaviour
 public LineRenderer frogTongue;
 private float tongueLength = 0;
 public TongueState tongueState = TongueState.Ready;
-private float tongueCooldownLeft;     
+public float tongueCooldownLeft;     
     void FrogTongue(float angleRad, Direction dir){
         Vector3[] toungePositions = new Vector3[6];
         if(dir == Direction.Right){
@@ -99,13 +99,13 @@ private float tongueCooldownLeft;
         if(Input.GetButton("Fire1") && tongueState == TongueState.Ready){
             tongueState = TongueState.Launching;
             audioSource.Play();
+            tongueCooldownLeft = tongueCooldown;
         }
         if(tongueState == TongueState.Launching && tongueLength == maxTongueLength){
             tongueState = TongueState.Retracting;
         }
         if(tongueState == TongueState.Retracting && tongueLength == 0){
             tongueState = TongueState.Cooldown;
-            tongueCooldownLeft = tongueCooldown;
             if(pickUp != null){
                 Destroy(pickUp);
             }

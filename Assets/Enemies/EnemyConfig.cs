@@ -21,6 +21,7 @@ public class EnemyConfig : MonoBehaviour
     {
         Vector2 newPos = new Vector2(target.transform.position.x, target.transform.position.y);
         transform.position = Vector2.MoveTowards(transform.position, newPos, speed * Time.deltaTime * (retreat ? -1.5f : 1));
+        transform.position = new Vector3(transform.position.x,transform.position.y,transform.position.y);
         if(target.transform.position.x < transform.position.x){
             spriteHolder.transform.localScale = new Vector3(-1* (retreat ? -1 : 1),1,1);
         }else{
