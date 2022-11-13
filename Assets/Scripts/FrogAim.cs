@@ -22,7 +22,7 @@ public class FrogAim : MonoBehaviour
         frogToungeVertices = new Vector3[frogTongue.positionCount];
         frogTongue.GetPositions(frogToungeVertices);
     }
-
+    public GameObject toungePos;
     public GameObject frogGraphics;
     public Animator animator;
     [Range(0,90)]public float upAnimationAngle = 45;
@@ -126,7 +126,8 @@ public float tongueCooldownLeft;
             frogTongue.SetPositions(toungePositions);
             animator.SetFloat("MouthOpen",1f);
             if(tongueState == TongueState.Launching){
-                tongueCol.offset = new Vector2(toungePositions[frogTongue.positionCount-1].x,toungePositions[frogTongue.positionCount-1].y);
+                Vector2 posipos = new Vector2(toungePos.transform.localPosition.x,toungePos.transform.localPosition.y);
+                tongueCol.offset = posipos + new Vector2(toungePositions[frogTongue.positionCount-1].x,toungePositions[frogTongue.positionCount-1].y);
             }else{
                 tongueCol.offset = Vector2.zero;
             }
