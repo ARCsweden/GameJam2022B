@@ -9,6 +9,7 @@ TagManager:
   - NonPenetrable
   - Edible
   - Weapon
+  - EnemySpawner
   layers:
   - Default
   - TransparentFX
