@@ -38,11 +38,14 @@ public class FrogMotion : MonoBehaviour
             animator.SetBool("Death",true);
             fA.enabled = false;
             this.enabled = false;
+            GetComponentInChildren<LineRenderer>().enabled = false;
+
         }
     }
     void BauguetteHit(){
             animator.SetBool("Death",true);
             fA.enabled = false;
             this.enabled = false;
+            GetComponentInChildren<LineRenderer>().enabled = false;
     }
 }

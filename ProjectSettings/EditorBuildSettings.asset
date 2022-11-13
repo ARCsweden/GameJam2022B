@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/2D Map Generator Tool/Scenes/Fields and forests in 3D.unity
+    guid: 8e7e3975b39a2b44392fa285b73e2f02
   m_configObjects: {}

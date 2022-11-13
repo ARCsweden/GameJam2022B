@@ -5,7 +5,7 @@ public class LayerOrderSetter : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     private MapGeneratorTool mapGeneratorTool;
-    public Transform trans;
+    private Transform trans;
     void Start()
     {
         mapGeneratorTool = FindObjectOfType<MapGeneratorTool>();

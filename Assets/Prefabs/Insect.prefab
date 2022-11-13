@@ -116,6 +116,7 @@ GameObject:
   - component: {fileID: 4017785815808056505}
   - component: {fileID: 6866702610843239072}
   - component: {fileID: 8316235294052425794}
+  - component: {fileID: 7905651858684971690}
   m_Layer: 0
   m_Name: Insect
   m_TagString: Edible
@@ -169,3 +170,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 4017785815619371568}
   variation: 0
+--- !u!114 &7905651858684971690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4017785815808056504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fd09be32d26cce459d1aff2bf88ce9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 4017785815619371569}
+  trans: {fileID: 0}
