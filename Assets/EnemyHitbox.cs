@@ -10,8 +10,6 @@ public class EnemyHitbox : MonoBehaviour
     private int Dead = 0;
     private GameObject cam;
     Vector3 viewPos;
-    int gone = 0;
-
 
     void Start()
     {
